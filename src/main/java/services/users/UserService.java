@@ -1,4 +1,4 @@
-package main.webapp.users;
+package services.users;
 
 public class UserService {
 }

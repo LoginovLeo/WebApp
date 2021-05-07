@@ -1,4 +1,4 @@
-package main.webapp.DBService;
+package services.DBService;
 
 public class DBService {
 

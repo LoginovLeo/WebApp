@@ -1,4 +1,4 @@
-package main.webapp.masseges;
+package services.masseges;
 
 public class MessageService {
 }

@@ -1,4 +1,4 @@
-package main.webapp.servlets;
+package controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

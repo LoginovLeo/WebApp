@@ -9,12 +9,12 @@
   <!--SignUp-->
   <servlet>
     <servlet-name>SignUp</servlet-name>
-    <servlet-class>main.webapp.servlets.SignUp</servlet-class>
+    <servlet-class>controller.SignUp</servlet-class>
   </servlet>
   <!--SignIn-->
   <servlet>
     <servlet-name>SignIn</servlet-name>
-    <servlet-class>main.webapp.servlets.SignIn</servlet-class>
+    <servlet-class>controller.SignIn</servlet-class>
   </servlet>
 
   <!--Mapping-->
