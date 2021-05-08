@@ -23,7 +23,12 @@ public class UserService {
         loginToProfile.put(userProfile.getLogin(), userProfile);
     }
 
+    public UserProfile getUserByLoginPass(String login, String pass) throws DBException {
+        UsersDataSet user = dbService.getUser(login,pass);
+        String name = user.getName();
 
+        return new UserProfile(name);
+    }
 
 
     public UserProfile getUserBySessionId(String sessionId) {

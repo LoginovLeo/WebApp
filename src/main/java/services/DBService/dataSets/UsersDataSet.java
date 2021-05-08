@@ -4,7 +4,7 @@ public class UsersDataSet {
     private long id;
     private String name;
 
-    public UsersDataSet(long id, String name) {
+    public UsersDataSet(long id, String name, String pass) {
         this.id = id;
         this.name = name;
     }

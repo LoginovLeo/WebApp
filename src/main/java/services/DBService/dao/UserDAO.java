@@ -7,16 +7,16 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class UserDAO {
-    private Executor executor;
+    private final Executor executor;
 
     public UserDAO(Connection connection) {
         this.executor = new Executor(connection);
     }
 
-    public UsersDataSet get(String name) throws SQLException {
-        return executor.execQuery("select * from users where user_name='" + name + "'", result -> {
+    public UsersDataSet get(String name, String pass) throws SQLException {
+        return executor.execQuery("select * from users where user_name='" + name + "' AND user_pass='"+pass+"'", result -> {
             result.next();
-            return new UsersDataSet(result.getInt(1), result.getString(2));
+            return new UsersDataSet(result.getInt(1), result.getString(2), result.getString(3));
         });
     }
 

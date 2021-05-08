@@ -1,6 +1,7 @@
 package services.DBService;
 
 import services.DBService.dao.UserDAO;
+import services.DBService.dataSets.UsersDataSet;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -37,6 +38,14 @@ public class DBService {
                 connection.setAutoCommit(true);
             } catch (SQLException ignore) {
             }
+        }
+    }
+
+    public UsersDataSet getUser(String name, String pass) throws DBException {
+        try {
+            return (new UserDAO(connection).get(name, pass));
+        } catch (SQLException e) {
+            throw new DBException(e);
         }
     }
 

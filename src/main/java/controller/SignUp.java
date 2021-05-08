@@ -13,14 +13,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class SignUp extends HttpServlet {
-
+    private final UserService userService = new UserService();
 
 
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       PrintWriter printWriter = resp.getWriter();
-       printWriter.write("Hallo World");
+        PrintWriter printWriter = resp.getWriter();
+        printWriter.write("Hallo World");
     }
 
     @Override
@@ -37,7 +37,7 @@ public class SignUp extends HttpServlet {
             return;
         }
         try {
-            UserService userService = new UserService();
+
             userService.addNewUser(new UserProfile(login,pass,email));
         } catch (DBException e) {
             e.printStackTrace();
