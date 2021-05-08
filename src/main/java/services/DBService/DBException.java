@@ -1,4 +1,7 @@
 package services.DBService;
 
-public class DBException {
+public class DBException extends Exception {
+    public DBException(Throwable throwable) {
+        super(throwable);
+    }
 }

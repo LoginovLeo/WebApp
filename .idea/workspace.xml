@@ -10,12 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd906aea-cb8f-4254-8c4d-8c61f32a98cb" name="Default Changelist" comment="Change structure">
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/DBException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/DBException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dao/userDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/UsersDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/UsersDataSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/executor/Exucotor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/executor/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/executor/ResultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/executor/ResultHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,9 +58,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.49624062" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -155,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620405908673</updated>
-      <workItem from="1620405911833" duration="7837000" />
+      <workItem from="1620405911833" duration="16753000" />
     </task>
     <task id="LOCAL-00001" summary="Change structure">
       <created>1620419821190</created>
@@ -164,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620419821190</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change structure">
+      <created>1620423386418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620423386418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

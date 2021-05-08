@@ -1,6 +1,10 @@
 package controller;
 
 
+import services.DBService.DBException;
+import services.users.UserProfile;
+import services.users.UserService;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,7 +13,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class SignUp extends HttpServlet {
-   @Override
+
+
+
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        PrintWriter printWriter = resp.getWriter();
        printWriter.write("Hallo World");
@@ -28,9 +36,14 @@ public class SignUp extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }
-
+        try {
+            UserService userService = new UserService();
+            userService.addNewUser(new UserProfile(login,pass,email));
+        } catch (DBException e) {
+            e.printStackTrace();
+        }
         PrintWriter printWriter = resp.getWriter();
-        printWriter.write("Success auth");
+        printWriter.write("User add");
         resp.setContentType("text/html;charset=utf-8");
         resp.setStatus(HttpServletResponse.SC_OK);
     }
