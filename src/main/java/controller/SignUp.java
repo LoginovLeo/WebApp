@@ -5,6 +5,7 @@ import services.DBService.DBException;
 import services.users.UserProfile;
 import services.users.UserService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,8 +20,8 @@ public class SignUp extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter printWriter = resp.getWriter();
-        printWriter.write("Hallo World");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/signUp.jsp");
+        requestDispatcher.forward(req, resp);
     }
 
     @Override
