@@ -1,9 +1,9 @@
 package services.DBService.dataSets;
 
 public class UsersDataSet {
-    private long id;
-    private String name;
-    private String email;
+    private final long id;
+    private final String name;
+    private final String email;
 
     public UsersDataSet(long id, String name, String email) {
         this.id = id;
