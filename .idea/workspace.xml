@@ -9,19 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd906aea-cb8f-4254-8c4d-8c61f32a98cb" name="Default Changelist" comment="Change structure">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="bd906aea-cb8f-4254-8c4d-8c61f32a98cb" name="Default Changelist" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AddMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/MessageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/MessageDataSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/UsersDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/UsersDataSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/executor/Executor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/executor/ResultHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/mainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/mainPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +190,7 @@
       <updated>1620405908673</updated>
       <workItem from="1620405911833" duration="16753000" />
       <workItem from="1620499550764" duration="5371000" />
-      <workItem from="1620598730140" duration="10930000" />
+      <workItem from="1620598730140" duration="13413000" />
     </task>
     <task id="LOCAL-00001" summary="Change structure">
       <created>1620419821190</created>
@@ -228,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620500702951</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changes">
+      <created>1620610949963</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620610949963</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes">
+      <created>1620611049635</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620611049635</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +254,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change structure" />
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
 </project>
