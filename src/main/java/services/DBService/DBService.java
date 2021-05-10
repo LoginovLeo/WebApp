@@ -6,6 +6,7 @@ import services.DBService.dataSets.UsersDataSet;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
 public class DBService {
 
@@ -43,7 +44,14 @@ public class DBService {
 
     public UsersDataSet getUser(String name, String pass) throws DBException {
         try {
-            return (new UserDAO(connection).get(name, pass));
+            return (new UserDAO(connection).getUser(name, pass));
+        } catch (SQLException e) {
+            throw new DBException(e);
+        }
+    }
+    public List<UsersDataSet> getUsers() throws DBException {
+        try {
+            return ( new UserDAO(connection).getUsers());
         } catch (SQLException e) {
             throw new DBException(e);
         }

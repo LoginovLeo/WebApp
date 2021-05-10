@@ -4,7 +4,9 @@ import services.DBService.DBException;
 import services.DBService.DBService;
 import services.DBService.dataSets.UsersDataSet;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class UserService {
@@ -28,6 +30,11 @@ public class UserService {
         String name = user.getName();
 
         return new UserProfile(name);
+    }
+
+    public List<UsersDataSet> getUsers() throws DBException {
+
+        return dbService.getUsers();
     }
 
 

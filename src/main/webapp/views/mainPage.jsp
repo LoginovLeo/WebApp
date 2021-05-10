@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="services.DBService.dataSets.UsersDataSet" %>
+<%@ page import="java.io.Writer" %><%--
   Created by IntelliJ IDEA.
   User: LLoginov
   Date: 08.05.2021
@@ -13,10 +15,23 @@
 <body>
 <h1>Main page</h1>
 <p>Welcome to main page</p>
+<h3>List of users</h3>
+<ul>
+    <%
+        List<UsersDataSet> users = (List<UsersDataSet>) request.getAttribute("ListOfUser");
+
+        if (users != null && !users.isEmpty()) {
+            for (UsersDataSet user : users) {
+                out.println("<li>" + "id = " + user.getId() + ", login = " + user.getName() + ", e-mail = " + user.getEmail() + "</li>");
+            }
+        }
+    %>
+</ul>
 <div>       <!-- content -->
     <div>    <!-- buttons holder -->
         <button onclick="location.href='/signOut'">SignOut</button>
     </div>
 </div>
+
 </body>
 </html>
