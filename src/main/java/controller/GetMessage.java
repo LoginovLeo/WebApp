@@ -24,8 +24,9 @@ public class GetMessage extends HttpServlet {
             e.printStackTrace();
         }
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/filtermessage.jsp");
-        requestDispatcher.forward(req, resp);
+        resp.sendRedirect("/mainPage");
+       /* RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/mainPage.jsp");
+        requestDispatcher.forward(req, resp);*/
         resp.setStatus(HttpServletResponse.SC_OK);
 
 

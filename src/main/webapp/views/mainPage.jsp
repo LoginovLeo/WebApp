@@ -39,13 +39,26 @@
     </label>
     <button type="submit" >Add</button>
 </form>
-<form method="get" action="/getMessage" >
+<p>Filter message</p>
+<form method="get" >
     <label>tag:
         <input type="text" name="tag"><br />
     </label>
     <button type="submit" >Filter</button>
 </form>
 
+<ul>
+    <%
+        List<MessageDataSet> messagesFilter = (List<MessageDataSet>) request.getAttribute("FilterMessage");
+
+        if (messagesFilter != null && !messagesFilter.isEmpty()) {
+            for (MessageDataSet msg : messagesFilter) {
+                out.println("<li>" + "id = " + msg.getId() + ", message = " + msg.getMessage() + ", tag = " + msg.getMessageTag() + "</li>");
+            }
+        }
+    %>
+</ul>
+<p>All messages</p>
 <ul>
     <%
             List<MessageDataSet> messages = (List<MessageDataSet>) request.getAttribute("Messages");

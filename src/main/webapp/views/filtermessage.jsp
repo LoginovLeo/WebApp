@@ -15,11 +15,11 @@
 <body>
 <ul>
     <%
-        List<MessageDataSet> messages = (List<MessageDataSet>) request.getAttribute("FilterMessage");
+        List<MessageDataSet> messagesFilter = (List<MessageDataSet>) request.getAttribute("FilterMessage");
 
-        if (messages != null && !messages.isEmpty()) {
-            for (MessageDataSet message : messages) {
-                out.println("<li>" + "id = " + message.getId() + ", login = " + message.getMessage() + ", e-mail = " + message.getMessageTag() + "</li>");
+        if (messagesFilter != null && !messagesFilter.isEmpty()) {
+            for (MessageDataSet msg : messagesFilter) {
+                out.println("<li>" + "id = " + msg.getId() + ", login = " + msg.getMessage() + ", e-mail = " + msg.getMessageTag() + "</li>");
             }
         }
     %>

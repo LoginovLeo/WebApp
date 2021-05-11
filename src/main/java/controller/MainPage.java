@@ -30,6 +30,12 @@ public class MainPage extends HttpServlet {
         } catch (DBException e) {
             e.printStackTrace();
         }
+        try {
+            List<MessageDataSet> tag = userService.getMessagesByTag(req.getParameter("tag"));
+            req.setAttribute("FilterMessage", tag);
+        } catch (DBException e) {
+            e.printStackTrace();
+        }
         resp.setContentType("text/html;charset=utf-8");
         resp.setStatus(HttpServletResponse.SC_OK);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/mainPage.jsp");
