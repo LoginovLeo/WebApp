@@ -14,15 +14,17 @@ public class GetMessage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws  IOException {
         UserService userService = new UserService();
+        resp.setContentType(("text/html;charset=utf-8"));
         try {
             List<MessageDataSet> tag = userService.getMessagesByTag(req.getParameter("tag"));
             for (MessageDataSet messageDataSet : tag) {
+
                 resp.getWriter().println(messageDataSet.getMessage() + " " + messageDataSet.getMessageTag() + " " + messageDataSet.getUserLogin());
             }
         } catch (DBException e) {
             e.printStackTrace();
         }
-        resp.setContentType(("text/html;charset=utf-8"));
+
         resp.setStatus(HttpServletResponse.SC_OK);
 
 

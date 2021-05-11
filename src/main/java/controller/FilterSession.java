@@ -16,6 +16,7 @@ public class FilterSession implements Filter {
         HttpSession session = httpReq.getSession();
         UserProfile currentUser = (UserProfile) session.getAttribute("Logged USER");
         if (currentUser == null) {
+            servletResponse.setContentType(("text/html;charset=utf-8"));
             servletResponse.getWriter().println("Unauthorized");
             httpRes.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             httpRes.sendRedirect("/signIn");//redirect to LoginServlet
