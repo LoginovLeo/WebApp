@@ -33,13 +33,11 @@ public class SignIn extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
         if (req.getParameter("login") == null || req.getParameter("pass") == null || req.getParameterMap().size() > 2) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             PrintWriter printWriter = resp.getWriter();
             printWriter.write("Incorrect request. Please enter \"login\" and \"pass\"");
-
             return;
         }
 

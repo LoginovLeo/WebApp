@@ -39,6 +39,13 @@
     </label>
     <button type="submit" >Add</button>
 </form>
+<form method="get" action="/getMessage" >
+    <label>tag:
+        <input type="text" name="tag"><br />
+    </label>
+    <button type="submit" >Filter</button>
+</form>
+
 <ul>
     <%
             List<MessageDataSet> messages = (List<MessageDataSet>) request.getAttribute("Messages");

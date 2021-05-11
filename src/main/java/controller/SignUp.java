@@ -37,7 +37,6 @@ public class SignUp extends HttpServlet {
             return;
         }
         try {
-
             userService.addNewUser(new UserProfile(login, pass, email));
         } catch (DBException e) {
             e.printStackTrace();
