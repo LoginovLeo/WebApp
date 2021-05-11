@@ -12,9 +12,11 @@ public class SignOut extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
+        resp.setStatus(HttpServletResponse.SC_OK);
         resp.getWriter().println("You logout");
         req.getSession().removeAttribute("Logged USER");
         req.getSession(false);
+
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/signOut.jsp");
         requestDispatcher.forward(req, resp);
 

@@ -30,6 +30,7 @@ public class SignUp extends HttpServlet {
         String email = req.getParameter("e-mail");
 
         if (login == null || pass == null || email == null || req.getParameterMap().size() > 3) {
+            resp.setContentType("text/html;charset=utf-8");
             PrintWriter printWriter = resp.getWriter();
             printWriter.write("Incorrect request. Please enter \"login\" , \"pass\" and \"email\"");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
