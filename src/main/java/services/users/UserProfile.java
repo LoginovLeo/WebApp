@@ -1,6 +1,7 @@
 package services.users;
 
 public class UserProfile {
+
     private final String login;
     private final String pass;
     private final String email;
@@ -28,4 +29,6 @@ public class UserProfile {
     public String getEmail() {
         return email;
     }
+
+
 }

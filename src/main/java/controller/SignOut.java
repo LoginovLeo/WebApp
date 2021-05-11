@@ -14,7 +14,7 @@ public class SignOut extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         resp.getWriter().println("You logout");
         req.getSession().removeAttribute("Logged USER");
-        HttpSession session = req.getSession(false);
+        req.getSession(false);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/signOut.jsp");
         requestDispatcher.forward(req, resp);
 

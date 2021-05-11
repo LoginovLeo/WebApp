@@ -10,10 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd906aea-cb8f-4254-8c4d-8c61f32a98cb" name="Default Changelist" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AddMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/MessageDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/MessageDataSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/GetMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AddMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FilterSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FilterSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/MessageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/MessageDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dataSets/MessageDataSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/masseges/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/masseges/MessageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/mainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/mainPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +45,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -51,13 +74,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/views/auth" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.49624062" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Leonid\IdeaProjects\WebApp\src\main\webapp\views\auth" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lloginov\IdeaProjects\SimpleWebService\src\main\java" />
     </key>
@@ -76,13 +103,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,7 +219,8 @@
       <updated>1620405908673</updated>
       <workItem from="1620405911833" duration="16753000" />
       <workItem from="1620499550764" duration="5371000" />
-      <workItem from="1620598730140" duration="13413000" />
+      <workItem from="1620598730140" duration="26214000" />
+      <workItem from="1620683984279" duration="7250000" />
     </task>
     <task id="LOCAL-00001" summary="Change structure">
       <created>1620419821190</created>
@@ -234,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620611049635</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changes">
+      <created>1620670133077</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620670133077</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

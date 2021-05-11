@@ -17,7 +17,6 @@ public class SignUp extends HttpServlet {
     private final UserService userService = new UserService();
 
 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/signUp.jsp");
@@ -25,13 +24,12 @@ public class SignUp extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String login = req.getParameter("login");
         String pass = req.getParameter("pass");
         String email = req.getParameter("e-mail");
 
-
-        if(login == null || pass == null || email == null || req.getParameterMap().size() > 3){
+        if (login == null || pass == null || email == null || req.getParameterMap().size() > 3) {
             PrintWriter printWriter = resp.getWriter();
             printWriter.write("Incorrect request. Please enter \"login\" , \"pass\" and \"email\"");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
@@ -39,7 +37,7 @@ public class SignUp extends HttpServlet {
         }
         try {
 
-            userService.addNewUser(new UserProfile(login,pass,email));
+            userService.addNewUser(new UserProfile(login, pass, email));
         } catch (DBException e) {
             e.printStackTrace();
         }

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class UserDAO {
 
-   private final Connection connection;
+    private final Connection connection;
 
     public UserDAO(Connection connection) {
         this.connection = connection;
@@ -26,7 +26,9 @@ public class UserDAO {
         preparedStatement.setString(2, pass);
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
-        UsersDataSet user = new UsersDataSet(resultSet.getLong(1), resultSet.getString(2), resultSet.getString(3));
+        UsersDataSet user = new UsersDataSet(resultSet.getLong(1),
+                resultSet.getString(2),
+                resultSet.getString(3));
         resultSet.close();
         preparedStatement.close();
         return user;
@@ -38,8 +40,10 @@ public class UserDAO {
         String req = "select id, user_name, user_email from users";
         PreparedStatement preparedStatement = connection.prepareStatement(req);
         ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()){
-            usersDataSets.add(new UsersDataSet(resultSet.getLong(1), resultSet.getString(2), resultSet.getString(3)));
+        while (resultSet.next()) {
+            usersDataSets.add(new UsersDataSet(resultSet.getLong(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3)));
         }
         resultSet.close();
         preparedStatement.close();

@@ -1,6 +1,7 @@
 package controller;
 
 import services.DBService.DBException;
+import services.DBService.dataSets.MessageDataSet;
 import services.DBService.dataSets.UsersDataSet;
 import services.users.UserService;
 
@@ -16,17 +17,6 @@ public class MainPage extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/mainPage.jsp");
-        requestDispatcher.forward(req, resp);
-        resp.getWriter().println("Successssssssssss ");
-        resp.setStatus(HttpServletResponse.SC_OK);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserService userService = new UserService();
         try {
             List<UsersDataSet> users = userService.getUsers();
@@ -34,9 +24,29 @@ public class MainPage extends HttpServlet {
         } catch (DBException e) {
             e.printStackTrace();
         }
+        try {
+            List<MessageDataSet> messages = userService.getMessages();
+            req.setAttribute("Messages", messages);
+        } catch (DBException e) {
+            e.printStackTrace();
+        }
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/mainPage.jsp");
         requestDispatcher.forward(req, resp);
-        resp.getWriter().println("Success ");
+        resp.setStatus(HttpServletResponse.SC_OK);
+
+    }
+
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        UserService userService = new UserService();
+        req.getParameter("message");
+        try {
+            userService.addMessage(req.getParameter("message"), req.getParameter("tag"), (String) req.getSession().getAttribute("Login"));
+        } catch (DBException e) {
+            e.printStackTrace();
+        }
+        resp.sendRedirect("mainPage");
         resp.setStatus(HttpServletResponse.SC_OK);
     }
 }

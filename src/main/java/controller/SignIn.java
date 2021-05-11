@@ -17,7 +17,7 @@ public class SignIn extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(req.getSession().getAttribute("Logged USER") != null){
+        if (req.getSession().getAttribute("Logged USER") != null) {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("/mainPage");
             requestDispatcher.forward(req, resp);
         }
@@ -27,7 +27,7 @@ public class SignIn extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         if (req.getParameter("login") == null || req.getParameter("pass") == null || req.getParameterMap().size() > 2) {
             PrintWriter printWriter = resp.getWriter();
@@ -41,19 +41,19 @@ public class SignIn extends HttpServlet {
             userProfile = userService.getUserByLoginPass(req.getParameter("login"), req.getParameter("pass"));
         } catch (DBException e) {
             e.printStackTrace();
-        } if (userProfile == null){
+        }
+        if (userProfile == null) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             resp.getWriter().println("Unauthorized");
             return;
         }
-        userService.addSession(req.getSession().getId(),userProfile);
-        req.getSession().setAttribute("Logged USER",userProfile);
+        req.getSession().setAttribute("Logged USER", userProfile);
+        req.getSession().setAttribute("Login", req.getParameter("login"));
 
+        resp.sendRedirect("/mainPage");
         resp.setContentType("text/html;charset=utf-8");
         resp.setStatus(HttpServletResponse.SC_OK);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/mainPage");
-        requestDispatcher.forward(req, resp);
 
     }
 }

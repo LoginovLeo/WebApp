@@ -2,51 +2,40 @@ package services.users;
 
 import services.DBService.DBException;
 import services.DBService.DBService;
+import services.DBService.dataSets.MessageDataSet;
 import services.DBService.dataSets.UsersDataSet;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 public class UserService {
-    private final Map<String, UserProfile> loginToProfile;
-    private final Map<String, UserProfile> sessionIdToProfile;
-    DBService dbService = new DBService();
 
-    public UserService() {
-        loginToProfile = new HashMap<>();
-        sessionIdToProfile = new HashMap<>();
-
-    }
+    private final DBService dbService = new DBService();
 
     public void addNewUser(UserProfile userProfile) throws DBException {
-        dbService.addUser(userProfile.getLogin(),userProfile.getPass(), userProfile.getEmail());
-        loginToProfile.put(userProfile.getLogin(), userProfile);
+        dbService.addUser(userProfile.getLogin(), userProfile.getPass(), userProfile.getEmail());
+
     }
 
     public UserProfile getUserByLoginPass(String login, String pass) throws DBException {
-        UsersDataSet user = dbService.getUser(login,pass);
+        UsersDataSet user = dbService.getUser(login, pass);
         String name = user.getName();
-
         return new UserProfile(name);
     }
 
     public List<UsersDataSet> getUsers() throws DBException {
-
         return dbService.getUsers();
     }
 
-
-    public UserProfile getUserBySessionId(String sessionId) {
-        return sessionIdToProfile.get(sessionId);
+    public void addMessage(String message, String messageTag, String login) throws DBException {
+        dbService.addMessage(message, messageTag, login);
     }
 
-    public void addSession(String sessionId, UserProfile userProfile) {
-        sessionIdToProfile.put(sessionId, userProfile);
+    public List<MessageDataSet> getMessages() throws DBException {
+        return dbService.getMessages();
     }
 
-    public void deleteSession(String sessionId) {
-        sessionIdToProfile.remove(sessionId);
+    public List<MessageDataSet> getMessagesByTag(String tag) throws DBException {
+        return dbService.getMessagesByTag(tag);
     }
 }

@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="services.DBService.dataSets.UsersDataSet" %>
+<%@ page import="services.DBService.dataSets.MessageDataSet" %>
 <%--
   Created by IntelliJ IDEA.
   User: LLoginov
@@ -27,11 +28,34 @@
         }
     %>
 </ul>
+<h3>List of messages</h3>
+<p>Add message</p>
+<form method="post" >
+    <label>message:
+        <input type="text" name="message"><br />
+    </label>
+    <label>tag:
+        <input type="text" name="tag"><br />
+    </label>
+    <button type="submit" >Add</button>
+</form>
+<ul>
+    <%
+            List<MessageDataSet> messages = (List<MessageDataSet>) request.getAttribute("Messages");
+
+        if (messages != null && !messages.isEmpty()) {
+            for (MessageDataSet message : messages) {
+                out.println("<li>" + "message = " + message.getMessage() + ", tag = " + message.getMessageTag() + ", login = " + message.getUserLogin() + "</li>");
+            }
+        }
+    %>
+</ul>
 <div>       <!-- content -->
     <div>    <!-- buttons holder -->
         <button onclick="location.href='/signOut'">SignOut</button>
     </div>
 </div>
+
 
 </body>
 </html>

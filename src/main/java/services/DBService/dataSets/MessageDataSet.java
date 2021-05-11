@@ -28,4 +28,14 @@ public class MessageDataSet {
     public String getMessageTag() {
         return messageTag;
     }
+
+    @Override
+    public String toString() {
+        return "MessageDataSet{" +
+                "id=" + id +
+                ", userLogin='" + userLogin + '\'' +
+                ", message='" + message + '\'' +
+                ", messageTag='" + messageTag + '\'' +
+                '}';
+    }
 }
