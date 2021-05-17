@@ -14,7 +14,6 @@ public class UserService {
 
     public void addNewUser(UserProfile userProfile) throws DBException {
         dbService.addUser(userProfile.getLogin(), userProfile.getPass(), userProfile.getEmail());
-
     }
 
     public UserProfile getUserByLoginPass(String login, String pass) throws DBException {

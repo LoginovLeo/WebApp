@@ -10,11 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd906aea-cb8f-4254-8c4d-8c61f32a98cb" name="Default Changelist" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GetMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GetMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/filtermessage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/filtermessage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/mainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/mainPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -206,6 +205,7 @@
       <workItem from="1620598730140" duration="26214000" />
       <workItem from="1620683984279" duration="7618000" />
       <workItem from="1620692619116" duration="12539000" />
+      <workItem from="1621237921862" duration="5510000" />
     </task>
     <task id="LOCAL-00001" summary="Change structure">
       <created>1620419821190</created>

@@ -16,20 +16,25 @@ public class DBService {
     static final String LOGIN = "postgres";
     static final String PASS = "1111";
 
+
     private final Connection connection;
+    private final UserDAO userDAO;
+    private final MessageDao messageDao;
+
 
     public DBService() {
         this.connection = getConnection();
+        this.userDAO = new UserDAO(connection);
+        this.messageDao = new MessageDao(connection);
     }
+
 
     public void addUser(String name, String pass, String email) throws DBException {
         try {
             connection.setAutoCommit(false);
-            UserDAO dao = new UserDAO(connection);
-            dao.createTable();
-            dao.insertUser(name, pass, email);
+            userDAO.createTable();
+            userDAO.insertUser(name, pass, email);
             connection.commit();
-
         } catch (SQLException e) {
             try {
                 connection.rollback();
@@ -46,7 +51,7 @@ public class DBService {
 
     public UsersDataSet getUser(String name, String pass) throws DBException {
         try {
-            return (new UserDAO(connection).getUser(name, pass));
+            return userDAO.getUser(name, pass);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -54,7 +59,7 @@ public class DBService {
 
     public List<UsersDataSet> getUsers() throws DBException {
         try {
-            return (new UserDAO(connection).getUsers());
+            return userDAO.getUsers();
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -63,8 +68,7 @@ public class DBService {
     public void addMessage(String message, String messageTag, String login) throws DBException {
         try {
             connection.setAutoCommit(false);
-            MessageDao messageSet = new MessageDao(connection);
-            messageSet.addMessage(message, messageTag, login);
+            messageDao.addMessage(message, messageTag, login);
             connection.commit();
         } catch (SQLException e) {
             try {
@@ -82,7 +86,7 @@ public class DBService {
 
     public List<MessageDataSet> getMessages() throws DBException {
         try {
-            return (new MessageDao(connection).getMessages());
+            return messageDao.getMessages();
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -90,7 +94,7 @@ public class DBService {
 
     public List<MessageDataSet> getMessagesByTag(String tag) throws DBException {
         try {
-            return (new MessageDao(connection).getMessageByTag(tag));
+            return messageDao.getMessageByTag(tag);
         } catch (SQLException e) {
             throw new DBException(e);
         }
