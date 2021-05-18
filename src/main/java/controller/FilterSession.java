@@ -1,7 +1,6 @@
 package controller;
 
 import services.users.UserProfile;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,10 +18,9 @@ public class FilterSession implements Filter {
             servletResponse.setContentType(("text/html;charset=utf-8"));
             servletResponse.getWriter().println("Unauthorized");
             httpRes.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            httpRes.sendRedirect("/signIn");//redirect to LoginServlet
+            httpRes.sendRedirect("/signIn"); //redirect to LoginServlet
         } else {
             filterChain.doFilter(servletRequest, servletResponse);
         }
-
     }
 }

@@ -2,7 +2,6 @@ package services.DBService.dao;
 
 import services.DBService.dataSets.UsersDataSet;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +17,6 @@ public class UserDAO {
         this.connection = connection;
     }
 
-
     public UsersDataSet getUser(String name, String pass) throws SQLException {
         String req = "select * from users where user_name=? AND user_pass=?";
         PreparedStatement preparedStatement = connection.prepareStatement(req);
@@ -32,7 +30,6 @@ public class UserDAO {
         resultSet.close();
         preparedStatement.close();
         return user;
-
     }
 
     public List<UsersDataSet> getUsers() throws SQLException {
@@ -58,7 +55,6 @@ public class UserDAO {
         preparedStatement.setString(3, email);
         preparedStatement.executeUpdate();
         preparedStatement.close();
-
     }
 
     public void createTable() throws SQLException {
@@ -66,6 +62,5 @@ public class UserDAO {
         PreparedStatement preparedStatement = connection.prepareStatement(req);
         preparedStatement.executeUpdate();
         preparedStatement.close();
-
     }
 }

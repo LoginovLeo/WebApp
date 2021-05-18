@@ -7,7 +7,7 @@ import services.DBService.dataSets.MessageDataSet;
 import java.util.List;
 
 public class MessageService {
-private final DBService dbService =new DBService();
+    private final DBService dbService = new DBService();
 
     public void addMessage(String message, String messageTag, String login) throws DBException {
         dbService.addMessage(message, messageTag, login);

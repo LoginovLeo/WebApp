@@ -1,10 +1,8 @@
 package controller;
 
-
 import services.DBService.DBException;
 import services.users.UserProfile;
 import services.users.UserService;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +13,6 @@ import java.io.PrintWriter;
 
 public class SignUp extends HttpServlet {
     private final UserService userService = new UserService();
-
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

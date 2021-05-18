@@ -10,17 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd906aea-cb8f-4254-8c4d-8c61f32a98cb" name="Default Changelist" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/mesages/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/initDB_postgres.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/postgres.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FilterSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FilterSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/GetMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GetMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/MessageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/mesages/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/mesages/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +229,7 @@
       <workItem from="1620598730140" duration="26214000" />
       <workItem from="1620683984279" duration="7618000" />
       <workItem from="1620692619116" duration="12539000" />
-      <workItem from="1621237921862" duration="15855000" />
+      <workItem from="1621237921862" duration="17916000" />
     </task>
     <task id="LOCAL-00001" summary="Change structure">
       <created>1620419821190</created>
@@ -327,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621259222219</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Changes">
+      <created>1621343056295</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621343056295</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changes">
+      <created>1621343107596</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1621343107596</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

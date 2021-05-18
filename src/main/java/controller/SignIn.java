@@ -3,7 +3,6 @@ package controller;
 import services.DBService.DBException;
 import services.users.UserProfile;
 import services.users.UserService;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +29,6 @@ public class SignIn extends HttpServlet {
         }
     }
 
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if (req.getParameter("login") == null || req.getParameter("pass") == null || req.getParameterMap().size() > 2) {
@@ -40,7 +38,6 @@ public class SignIn extends HttpServlet {
             printWriter.write("Incorrect request. Please enter \"login\" and \"pass\"");
             return;
         }
-
         UserProfile userProfile = null;
         try {
             userProfile = userService.getUserByLoginPass(req.getParameter("login"), req.getParameter("pass"));
@@ -58,7 +55,5 @@ public class SignIn extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
         resp.setStatus(HttpServletResponse.SC_OK);
         resp.sendRedirect("/mainPage");
-
-
     }
 }

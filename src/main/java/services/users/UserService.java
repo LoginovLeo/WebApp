@@ -2,11 +2,9 @@ package services.users;
 
 import services.DBService.DBException;
 import services.DBService.DBService;
-import services.DBService.dataSets.MessageDataSet;
 import services.DBService.dataSets.UsersDataSet;
 
 import java.util.List;
-
 
 public class UserService {
 
@@ -24,17 +22,5 @@ public class UserService {
 
     public List<UsersDataSet> getUsers() throws DBException {
         return dbService.getUsers();
-    }
-
-    public void addMessage(String message, String messageTag, String login) throws DBException {
-        dbService.addMessage(message, messageTag, login);
-    }
-
-    public List<MessageDataSet> getMessages() throws DBException {
-        return dbService.getMessages();
-    }
-
-    public List<MessageDataSet> getMessagesByTag(String tag) throws DBException {
-        return dbService.getMessagesByTag(tag);
     }
 }
