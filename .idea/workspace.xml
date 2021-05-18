@@ -10,10 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd906aea-cb8f-4254-8c4d-8c61f32a98cb" name="Default Changelist" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DBService/dao/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/mesages/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/initDB_postgres.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/postgres.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GetMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GetMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DBService/DBService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/users/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,17 +71,31 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.49624062" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Leonid\IdeaProjects\WebApp\src\main\webapp\views\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lloginov\IdeaProjects\WebApplication\src\main\resources" />
       <recent name="C:\Users\Lloginov\IdeaProjects\SimpleWebService\src\main\java" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.45">
+    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="services.DBService.dao.MainTest" />
+      <module name="SimpleWebService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.DBService.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.Test" />
       <module name="SimpleWebService" />
@@ -188,6 +209,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainTest" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -205,7 +227,7 @@
       <workItem from="1620598730140" duration="26214000" />
       <workItem from="1620683984279" duration="7618000" />
       <workItem from="1620692619116" duration="12539000" />
-      <workItem from="1621237921862" duration="5510000" />
+      <workItem from="1621237921862" duration="15855000" />
     </task>
     <task id="LOCAL-00001" summary="Change structure">
       <created>1620419821190</created>
@@ -298,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620739854236</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changes">
+      <created>1621259222218</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1621259222219</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,5 +349,9 @@
     <MESSAGE value="Change structure" />
     <MESSAGE value="Changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,35 +1,43 @@
 package services.DBService;
 
+import services.DBService.dao.MainTest;
 import services.DBService.dao.MessageDao;
 import services.DBService.dao.UserDAO;
 import services.DBService.dataSets.MessageDataSet;
 import services.DBService.dataSets.UsersDataSet;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Properties;
 
 public class DBService {
 
-    static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/simpleWS";
-    static final String LOGIN = "postgres";
-    static final String PASS = "1111";
-
-
-    private final Connection connection;
-    private final UserDAO userDAO;
-    private final MessageDao messageDao;
-
+    private Connection connection;
+    private UserDAO userDAO;
+    private MessageDao messageDao;
 
     public DBService() {
-        this.connection = getConnection();
-        this.userDAO = new UserDAO(connection);
-        this.messageDao = new MessageDao(connection);
+        try  {
+            Properties properties = new Properties();
+            properties.load(MainTest.class.getClassLoader().getResourceAsStream("postgres.properties"));
+            String connectionUrl = properties.getProperty("database.url");
+            String login = properties.getProperty("database.username");
+            String pass = properties.getProperty("database.password");
+
+            this.connection = getConnection(connectionUrl,login,pass);
+            this.userDAO = new UserDAO(connection);
+            this.messageDao = new MessageDao(connection);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
-
     public void addUser(String name, String pass, String email) throws DBException {
+
         try {
             connection.setAutoCommit(false);
             userDAO.createTable();
@@ -100,10 +108,10 @@ public class DBService {
         }
     }
 
-    public static Connection getConnection() {
+    public static Connection getConnection(String url,String log,String pass) {
         try {
             DriverManager.registerDriver(new org.postgresql.Driver());
-            return DriverManager.getConnection(DB_URL, LOGIN, PASS);
+            return DriverManager.getConnection(url, log, pass);
         } catch (SQLException e) {
             e.printStackTrace();
         }

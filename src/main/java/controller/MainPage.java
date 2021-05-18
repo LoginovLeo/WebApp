@@ -3,6 +3,7 @@ package controller;
 import services.DBService.DBException;
 import services.DBService.dataSets.MessageDataSet;
 import services.DBService.dataSets.UsersDataSet;
+import services.mesages.MessageService;
 import services.users.UserService;
 
 import javax.servlet.RequestDispatcher;
@@ -14,10 +15,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class MainPage extends HttpServlet {
-
+    private final UserService userService = new UserService();
+    private final MessageService messageService = new MessageService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UserService userService = new UserService();
+
+
         try {
             List<UsersDataSet> users = userService.getUsers();
             req.setAttribute("ListOfUser", users);
@@ -25,13 +28,13 @@ public class MainPage extends HttpServlet {
             e.printStackTrace();
         }
         try {
-            List<MessageDataSet> messages = userService.getMessages();
+            List<MessageDataSet> messages = messageService.getMessages();
             req.setAttribute("Messages", messages);
         } catch (DBException e) {
             e.printStackTrace();
         }
         try {
-            List<MessageDataSet> tag = userService.getMessagesByTag(req.getParameter("tag"));
+            List<MessageDataSet> tag = messageService.getMessagesByTag(req.getParameter("tag"));
             req.setAttribute("FilterMessage", tag);
         } catch (DBException e) {
             e.printStackTrace();
@@ -51,7 +54,6 @@ public class MainPage extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
             return;
         }
-            UserService userService = new UserService();
             req.getParameter("message");
             try {
                 userService.addMessage(req.getParameter("message"), req.getParameter("tag"), (String) req.getSession().getAttribute("Login"));
