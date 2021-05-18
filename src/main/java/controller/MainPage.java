@@ -56,7 +56,7 @@ public class MainPage extends HttpServlet {
         }
             req.getParameter("message");
             try {
-                userService.addMessage(req.getParameter("message"), req.getParameter("tag"), (String) req.getSession().getAttribute("Login"));
+                messageService.addMessage(req.getParameter("message"), req.getParameter("tag"), (String) req.getSession().getAttribute("Login"));
             } catch (DBException e) {
                 e.printStackTrace();
             }
