@@ -14,12 +14,16 @@ public class GetMessage extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         MessageService messageService = new MessageService();
         resp.setContentType(("text/html;charset=utf-8"));
-        try {
-            List<MessageDataSet> tag = messageService.getMessagesByTag(req.getParameter("tag"));
-            req.setAttribute("FilterMessage", tag);
-        } catch (DBException e) {
-            e.printStackTrace();
+        if (req.getParameter("tag") == null || req.getParameter("tag").isEmpty()){
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return;
         }
+            try {
+                List<MessageDataSet> tag = messageService.getMessagesByTag(req.getParameter("tag"));
+                req.setAttribute("FilterMessage", tag);
+            } catch (DBException e) {
+                e.printStackTrace();
+            }
         resp.sendRedirect("/mainPage");
         resp.setStatus(HttpServletResponse.SC_OK);
     }

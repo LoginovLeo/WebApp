@@ -9,11 +9,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAO {
+public class UserDao {
 
     private final Connection connection;
 
-    public UserDAO(Connection connection) {
+    public UserDao(Connection connection) {
         this.connection = connection;
     }
 
